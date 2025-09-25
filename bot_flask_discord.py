@@ -1,9 +1,10 @@
+import os
 import discord
 from discord.ext import commands
 from flask import Flask, request
 import threading
 
-TOKEN = "SEU_TOKEN_DISCORD"
+TOKEN = os.getenv("DISCORD_TOKEN")  # pega do Render
 
 # Configurar intents
 intents = discord.Intents.default()
